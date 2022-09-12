@@ -1,3 +1,16 @@
+import express, { Request, Response, Router } from 'express';
+
+const router: Router = express.Router();
+
+router.get('/', (req: Request, res: Response) => {
+    return res.status(200).json({
+        status: 200,
+        message: '유저 조회 성공'
+    });
+});
+
+module.exports = router;
+
 /**
  * @todo 제품 주문 내역 열람( 결제 완료 /  결제 취소)
  */
